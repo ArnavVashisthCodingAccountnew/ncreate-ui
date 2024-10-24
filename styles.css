@@ -1,0 +1,144 @@
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        @font-face {
+            font-family: "ES Klarheit Plakat TRIAL Exblack";
+            src: url("https://db.onlinewebfonts.com/t/a774a229820b2a4d8958a441fbf07f4a.eot");
+            src: url("https://db.onlinewebfonts.com/t/a774a229820b2a4d8958a441fbf07f4a.eot?#iefix")format("embedded-opentype"),
+            url("https://db.onlinewebfonts.com/t/a774a229820b2a4d8958a441fbf07f4a.woff2")format("woff2"),
+            url("https://db.onlinewebfonts.com/t/a774a229820b2a4d8958a441fbf07f4a.woff")format("woff"),
+            url("https://db.onlinewebfonts.com/t/a774a229820b2a4d8958a441fbf07f4a.ttf")format("truetype"),
+            url("https://db.onlinewebfonts.com/t/a774a229820b2a4d8958a441fbf07f4a.svg#ES Klarheit Plakat TRIAL Exblack")format("svg");
+        }
+        body, html {
+            height: 100%;
+            width: 100%;
+            font-family: "Urbanist", sans-serif;
+            background-color: #000;
+            color: white;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            width: 100%;
+        }
+
+        /* Sidebar Styles */
+    
+        /* Main content area */
+        .main-content {
+            margin-left: 200px; /* Matches the sidebar width */
+            padding: 20px;
+            overflow-y: auto; /* Enable scrolling */
+            width: calc(100% - 200px); /* Remaining space after sidebar */
+            height: 100vh; /* Full height */
+        }
+
+        .main-content h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            
+        }
+
+        .main-content p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            position: fixed;
+            bottom: 0;
+            left: 200px;
+            width: calc(100% - 200px);
+        }
+
+        .main-content img {
+            width: 110%;
+            height: 45%;
+            margin-right: 0px;
+            margin-top: -20px;
+            margin-left: -20px;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            .sidebar {
+                width: 240px; /* Adjust sidebar width */
+            }
+            .main-content {
+                margin-left: 240px;
+                width: calc(100% - 240px);
+            }
+            .footer {
+                left: 240px;
+                width: calc(100% - 240px);
+            }
+        }
+/* Remove scrollbar(sideways) */
+.main-content {
+  overflow-x: hidden;
+}
+
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 220px; /* Adjust sidebar width */
+            }
+            .main-content {
+                margin-left: 220px;
+                width: calc(100% - 220px);
+            }
+            .footer {
+                left: 220px;
+                width: calc(100% - 220px);
+            }
+            .menu-item img {
+                width: 22px;
+                height: 22px; /* Adjust icon size */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column; /* Stack sidebar and content */
+            }
+            .sidebar {
+                width: 100%; /* Sidebar takes full width */
+                height: auto; /* Let sidebar adjust height */
+                position: relative; /* No fixed position */
+            }
+            .main-content {
+                margin-left: 0; /* Reset content margin */
+                width: 100%; /* Full width content */
+                padding: 10px;
+            }
+            .footer {
+                left: 0;
+                width: 100%; /* Footer takes full width */
+            }
+        }
+
+        .header-text {
+            font-family: "ES Klarheit Plakat TRIAL Exblack";
+            color: #17e16f;
+            margin-top: 15px;
+            margin-left: 10px;
+        }
+
+        .author-info {
+            display: flex;
+            align-items: center;
+            margin-top: 10px; /* Adjust as needed for spacing */
+        }
+        .sidebar{
+            background-color: #171616;
+        }
+        

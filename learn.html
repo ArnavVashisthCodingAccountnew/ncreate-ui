@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/a774a229820b2a4d8958a441fbf07f4a?family=ES+Klarheit+Plakat+TRIAL+Exblack" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a0b79457b8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <style>
+        .scroll-container::-webkit-scrollbar, .scroll-container1::-webkit-scrollbar {
+            display: none; /* Safari and Chrome */
+        }
+        
+        .scroll-container, .scroll-container1 {
+            display: flex;
+            overflow-x: auto; /* Enable horizontal scrolling */
+            overflow-y: hidden; /* Prevent vertical scrolling */
+            white-space: nowrap;
+            padding: 10px;
+            scrollbar-width: none; /* For Firefox */
+            -ms-overflow-style: none; /* For IE and Edge */
+            height: 220px; /* Set height based on content */
+            margin-bottom: 20px; /* Add bottom margin */
+        }
+
+        .scroll-container div, .scroll-container1 div {
+            flex: 0 0 auto; /* Prevent shrinking */
+            margin: 0 10px; /* Adjust margin for spacing */
+            border-radius: 15px;
+            width: 350px; /* Card width */
+            min-width: 300px; /* Minimum width to prevent excess wrapping */
+            height: 200px; /* Card height */
+            background: url(./icons/image-core-resources.png);
+            background-repeat: no-repeat;
+            background-size: cover; /* Cover to ensure background fits */
+            display: flex; /* Use flexbox for alignment */
+            flex-direction: column; /* Stack elements vertically */
+            justify-content: flex-end; /* Align text to the bottom */
+            padding: 10px; /* Padding for text */
+            white-space: normal; /* Allow text to wrap */
+            overflow-wrap: break-word; /* Prevent text overflow */
+        }
+
+        .scroll-container1 div {
+            background: #171616; /* Adjusting background color for contrast */
+            height: 100px; /* Adjust height */
+        }
+
+        h1 {
+            margin: 0; /* Remove default margin */
+            color: white;
+            font-family: 'ES Klarheit Plakat TRIAL Exblack', sans-serif;
+            font-weight: 800;
+            font-size: 28px;
+        }
+
+        p {
+            margin: 0; /* Remove default margin */
+            color: white;
+            font-size: 13.71px;
+            font-family: 'Urbanist', serif;
+            font-weight: 500;
+            overflow-wrap: break-word; /* Ensure long words break */
+        }
+
+        .carousel-wrapper {
+            position: relative;
+            width: 100%;
+            padding-right: 60px;
+        }
+
+        .scroll-button {
+            position: absolute;
+            background-color: transparent;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            z-index: 1;
+            height: 60px;
+            width: 60px;
+        }
+
+        #scrollButton1, #scrollButton3, #scrollButton4 {
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        #scrollButton2 {
+            right: 0;
+            top: 75px;
+            transform: translateY(-50%);
+        }
+
+        .help-out {
+            margin-top: 20px; /* Space between carousel and Help Out */
+            font-family: 'Urbanist', serif;
+            margin-left: 25px;
+        }
+
+        .input-container {
+            width: 100%; /* Full width */
+            margin: 20px 25px; /* Add some margin */
+        }
+
+        input[type="text"] {
+            width: 90%; /* Full width for the text input */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="menu-item">
+                <img src="icons/home-icon.png" style="width:31.74px;" class="home" alt="Home Icon">
+                <p style="margin-left:-4px;">Home</p>
+            </div>
+            <div class="menu-item">
+                <img src="icons/events-icon.png" class="events" alt="Events Icon">
+                <p>Events</p>
+            </div>
+            <div class="menu-item">
+                <img src="icons/community-icon-normal.png" class="community" alt="Community Icon">
+                <p style="margin-left:-1px;">Community</p>
+            </div>
+            <div class="menu-item">
+                <img src="icons/learn-icon-green.png" style="height:37px;width:32px;margin-left:-7px;margin-right:6px;" class="learn" alt="Learn Icon">
+                <p style="color:#17e16f;margin-left:-4px;">Learn</p>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <h1 style="font-family: 'Urbanist', serif; margin-left: 25px;">Popular Resources</h1>
+            <div class="carousel-wrapper">
+                <div class="scroll-container" id="scrollContainer1">
+                    <div>
+                        <h1>3D Modeling</h1>
+                        <p>Shared by JLo</p>
+                    </div>
+                    <div>
+                        <h1>3D Modeling</h1>
+                        <p>Shared by JLo</p>
+                    </div>
+                    <div>
+                        <h1>3D Modeling</h1>
+                        <p>Shared by JLo</p>
+                    </div>
+                    <div>
+                        <h1>3D Modeling</h1>
+                        <p>Shared by JLo</p>
+                    </div>
+                    <div>
+                        <h1>3D Modeling</h1>
+                        <p>Shared by JLo</p>
+                    </div>
+                </div>
+                <button class="scroll-button" id="scrollButton1" onclick="scrollRight('scrollContainer1')">
+                    <img style="width:60px;height:60px;" src="icons/arrow.png">
+                </button>
+            </div>
+
+            <!-- Help Out Section -->
+            <h1 class="help-out">Help Out</h1>
+            <form>
+                <div class="input-container">
+                    <input type="text" id="first_name" style="background: #171616; border-color: #171616;" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5" placeholder="Post questions for peers and alums to answer..." required />
+                    <img style="width:18px;height:18px;margin-left:900px;margin-top:-31px;" src="icons/Rocket-1.svg" alt="">
+                </div>
+            </form>
+
+            <!-- Bottom Carousel -->
+            <div class="carousel-wrapper">
+                <div class="scroll-container1" id="scrollContainer2">
+                    <div>
+                        <h1 style="font-size:17px;margin-bottom:-20px;">@jyororoa</h1>
+                        <p style="margin-top: 20px;line-height: 19px;">I want to get into design but don’t know where to start...Any suggestions?</p>
+                    </div>
+                    <div>
+                        <h1 style="font-size:17px;margin-bottom:-20px;">@jyororoa</h1>
+                        <p style="margin-top: 20px;line-height: 19px;">I want to get into design but don’t know where to start...Any suggestions?</p>
+                    </div>
+                    <div>
+                        <h1 style="font-size:17px;margin-bottom:-20px;">@jyororoa</h1>
+                        <p style="margin-top: 20px;line-height: 19px;">I want to get into design but don’t know where to start...Any suggestions?</p>
+                    </div>
+                </div>
+                <button class="scroll-button" id="scrollButton2" onclick="scrollRight('scrollContainer2')">
+                    <img style="width:60px;height:60px;" src="icons/arrow.png">
+                </button>
+            </div>
+
+            <!-- Additional Carousel for Learning Design -->
+            <h1 style="font-family: 'Urbanist', serif; margin-left: 25px;margin-top:-110px;">Learn Design</h1>
+            <div class="carousel-wrapper">
+                <div class="scroll-container" id="scrollContainer3">
+                    <div>
+                        <h1>UI Design</h1>
+                        <p>Shared by Alex</p>
+                    </div>
+                    <div>
+                        <h1>UI Design</h1>
+                        <p>Shared by Alex</p>
+                    </div>
+                    <div>
+                        <h1>UI Design</h1>
+                        <p>Shared by Alex</p>
+                    </div>
+                    <div>
+                        <h1>UI Design</h1>
+                        <p>Shared by Alex</p>
+                    </div>
+                </div>
+                <button class="scroll-button" id="scrollButton3" onclick="scrollRight('scrollContainer3')">
+                    <img style="width:60px;height:60px;" src="icons/arrow.png">
+                </button>
+            </div>
+
+            <!-- Additional Carousel for Learning Development -->
+            <h1 style="font-family: 'Urbanist', serif; margin-left: 25px;margin-top:-10px;">Learn Development</h1>
+            <div class="carousel-wrapper">
+                <div class="scroll-container" id="scrollContainer4"> <!-- Changed ID here -->
+                    <div>
+                        <h1>Web Development</h1>
+                        <p>Shared by Alex</p>
+                    </div>
+                    <div>
+                        <h1>Web Development</h1>
+                        <p>Shared by Alex</p>
+                    </div>
+                    <div>
+                        <h1>Web Development</h1>
+                        <p>Shared by Alex</p>
+                    </div>
+                    <div>
+                        <h1>Web Development</h1>
+                        <p>Shared by Alex</p>
+                    </div>
+                </div>
+                <button class="scroll-button" id="scrollButton4" onclick="scrollRight('scrollContainer4')"> <!-- Changed ID here -->
+                    <img style="width:60px;height:60px;" src="icons/arrow.png">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function scrollRight(containerId) {
+            const container = document.getElementById(containerId);
+            container.scrollBy({ left: 250, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

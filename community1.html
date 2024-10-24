@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sidebar.css">
+    <script src="https://kit.fontawesome.com/a0b79457b8.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: #000;
+            color: white;
+            min-height: 100vh;
+        }
+
+        .container {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+        }
+
+        .sidebar {
+            width: 200px;
+            padding: 20px;
+            background: #111;
+            position: fixed;
+            height: 100vh;
+        }
+
+
+        .main-content {
+            margin-left: 200px;
+            padding: 40px;
+            flex-grow: 1;
+            position: relative;
+        }
+
+        .card {
+            background-color: #171616;
+            width: 967px;
+            height: 410px;
+            margin: 20px auto;
+            border-radius: 15px;
+            position: relative; /* Position relative for absolute positioning of children */
+        }
+
+        .card img {
+            height: 100%; /* Maintain aspect ratio */
+            width: 70%;
+            border-radius: 15px 15px 0 0; /* Match border radius */
+        }
+
+        .parent {
+            display: flex; /* Use flexbox for horizontal alignment */
+            overflow-x: auto; /* Allow horizontal scrolling */
+            padding: 10px; /* Add some padding for aesthetics */
+            white-space: nowrap; /* Prevent wrapping */
+            border-radius: 8px; /* Slightly round the corners */
+            background: rgba(255, 255, 255, 0.05); /* Optional: background for better visibility */
+            margin: 0 auto; /* Center the parent container */
+            margin-top: -20px; /* Adjust positioning */
+        }
+
+        .child {
+            display: inline-block;
+            padding: 0.4rem;
+            vertical-align: middle;
+            margin-right: 10px; /* Space between child elements */
+        }
+
+        /* Responsive styles */
+   
+        .child p{
+color: white;
+ font-size: 15.53px;
+ font-family: 'Urbanist', serif;
+ font-weight: 600;
+ line-height: 13.97px;
+ word-wrap: break-word;
+        }
+     .great{
+        margin-left:600px;
+     }
+    </style>
+</head>
+<body>
+   
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="menu-item">
+                <img src="icons/home-icon.png" style=""  class="home" alt="Home Icon">
+                <p style="margin-left:-3px;">Home</p>
+            </div>
+            <div class="menu-item">
+                <img src="icons/events-icon.png" class="events" alt="Events Icon">
+                <p>Events</p>
+            </div>
+            <div class="menu-item">
+                <img src="icons/community-icon.png"  class="community" alt="Community Icon" style="width:36px;margin-left:-8.5px;">
+                <p style="margin-left:-4px;color:#17e16f;">Community</p>
+            </div>
+            <div class="menu-item">
+                <img src="icons/learn-icon.png"  class="learn" alt="Learn Icon">
+                <p>Learn</p>
+            </div>
+            <div class="menu-item" style="margin-top:80px;margin-left:35px;"><i style="font-size:15px;" class="fa-solid fa-magnifying-glass"></i></div>
+            <div class="menu-item" style="margin-left:35px;"><p>All</p></div>
+            <div class="menu-item"  style="margin-left:35px;"><p>Design</p></div>
+
+            <div class="menu-item"  style="margin-left:35px;"><p>Development</p></div>
+            <div class="menu-item" style="margin-left:35px;"><p>Cryptic</p></div>
+            <div class="menu-item" style="margin-left:35px;"><p>Hackathon</p></div>
+            <div class="menu-item"  style="margin-left:35px;"><p>Programming</p></div>
+            <div class="menu-item"  style="margin-left:35px;"><p>Filmmaking</p></div>
+        </div>
+         
+
+        <div class="main-content">
+            <div class="parent">
+                <div class="child"><img src="icons/yourstoryicon.png" alt="">
+                    <p>Your story</p>
+                </div>
+                <div class="child"><img src="icons/yourstoryicon.png" alt="">
+                    <p>Your story</p>
+                </div>
+                <div class="child"><img src="icons/yourstoryicon.png" alt="">
+                    <p>Your story</p>
+                </div>
+                <div class="child"><img src="icons/yourstoryicon.png" alt="">
+                    <p>Your story</p>
+                </div>
+                <div class="child"><img src="icons/yourstoryicon.png" alt="">
+                    <p>Your story</p>
+                </div>
+                <div class="child"><img src="icons/yourstoryicon.png" alt="">
+                    <p>Your story</p>
+                </div>
+                <div class="child"><img src="icons/yourstoryicon.png" alt="">
+                    <p>Your story</p>
+                </div>
+                <div class="child"><img src="icons/yourstoryicon.png" alt="">
+                    <p>Your story</p>
+                </div>
+                <div class="child"><img src="icons/yourstoryicon.png" alt="">
+                    <p>Your story</p>
+                </div>
+                <div class="child"><img src="icons/yourstoryicon.png" alt="">
+                    <p>Your story</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="imag/image 402.png" alt="">
+                <img src="icons/@shukla.png" style="position: absolute; width: 50px; height: 60px; left: 15px; top: 1px; z-index: 1;" alt="Jyo Icon">
+                <p style="position: absolute; width: 50px; height: 60px; left: 70px; bottom: 325px; z-index: 1; color: white; font-size: 16.38px; font-weight: 600; line-height: 14.74px;">@jyororoa</p>
+                <p style="margin-left:750px;margin-top: -230px; color: white; font-size: 20px; font-weight: 400; line-height: 18px; word-wrap: break-word; font-family: 'Urbanist', serif; opacity: 0.40;">no comments yet</p>
+                <p style="margin-left:685px;margin-top: 110px; color: white; font-size: 16.38px; font-weight: 600; line-height: 14.74px; word-wrap: break-word; font-family: 'Urbanist', serif;">@jyororoa</p>
+                <p style="margin-left:685px;margin-top:10px; color: white; font-size: 17.53px; font-weight: 400; line-height: 15.78px; word-wrap: break-word; font-family: 'Urbanist', serif;">Extremely grateful for this experience (I had fun at this event lolz 😁)</p>
+            </div>
+            <div class="card">
+                <img src="imag/image 402.png" alt="">
+                <img src="icons/@shukla.png" style="position: absolute; width: 50px; height: 60px; left: 15px; top: 1px; z-index: 1;" alt="Jyo Icon">
+                <p style="position: absolute; width: 50px; height: 60px; left: 70px; bottom: 325px; z-index: 1; color: white; font-size: 16.38px; font-weight: 600; line-height: 14.74px;">@jyororoa</p>
+                <p style="margin-left:750px;margin-top: -230px; color: white; font-size: 20px; font-weight: 400; line-height: 18px; word-wrap: break-word; font-family: 'Urbanist', serif; opacity: 0.40;">no comments yet</p>
+                <p style="margin-left:685px;margin-top: 110px; color: white; font-size: 16.38px; font-weight: 600; line-height: 14.74px; word-wrap: break-word; font-family: 'Urbanist', serif;">@jyororoa</p>
+                <p style="margin-left:685px;margin-top:10px; color: white; font-size: 17.53px; font-weight: 400; line-height: 15.78px; word-wrap: break-word; font-family: 'Urbanist', serif;">Extremely grateful for this experience (I had fun at this event lolz 😁)</p>
+            </div>
+            <div class="card">
+                <img src="imag/image 402.png" alt="">
+                <img src="icons/@shukla.png" style="position: absolute; width: 50px; height: 60px; left: 15px; top: 1px; z-index: 1;" alt="Jyo Icon">
+                <p style="position: absolute; width: 50px; height: 60px; left: 70px; bottom: 325px; z-index: 1; color: white; font-size: 16.38px; font-weight: 600; line-height: 14.74px;">@jyororoa</p>
+                <p style="margin-left:750px;margin-top: -230px; color: white; font-size: 20px; font-weight: 400; line-height: 18px; word-wrap: break-word; font-family: 'Urbanist', serif; opacity: 0.40;">no comments yet</p>
+                <p style="margin-left:685px;margin-top: 110px; color: white; font-size: 16.38px; font-weight: 600; line-height: 14.74px; word-wrap: break-word; font-family: 'Urbanist', serif;">@jyororoa</p>
+                <p style="margin-left:685px;margin-top:10px; color: white; font-size: 17.53px; font-weight: 400; line-height: 15.78px; word-wrap: break-word; font-family: 'Urbanist', serif;">Extremely grateful for this experience (I had fun at this event lolz 😁)</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
